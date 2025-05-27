@@ -123,4 +123,11 @@ button:focus-visible {
 .third-color{
   color: #FFE1E0;
 }
-
+@media (max-width: 768px) {
+  .email-column {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

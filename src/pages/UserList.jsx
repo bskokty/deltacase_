@@ -170,7 +170,7 @@ function UserList() {
 								<th>ID</th>
 								<th>İsim</th>
 								<th>E-posta</th>
-								<th>İşlemler</th>
+								<th className="text-center">İşlemler</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -178,12 +178,12 @@ function UserList() {
 								<tr key={index}>
 									<td>{user.id}</td>
 									<td>{user.firstName + ' ' + user.lastName}</td>
-									<td>{user.email}</td>
-									<td>
+									<td className="email-column">{user.email}</td>
+									<td className="text-center">
 										<Button
 											color="success"
 											size="sm"
-											className="mx-2"
+											className="mx-1"
 											onClick={() => toggleModal(user)}
 											title="Güncelle"
 											outline
@@ -193,6 +193,7 @@ function UserList() {
 										<Button
 											color="danger"
 											size="sm"
+											className="mx-1"
 											onClick={() => handleDelete(user.id)}
 											title="Sil"
 										>
